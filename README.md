@@ -1,4 +1,4 @@
-## React Native CollapsingToolbar
+## React-native-collapsingtoolbar-parallax-header
 
 ## Screen Shot
 
