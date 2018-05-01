@@ -1,0 +1,27 @@
+{
+  "name": "react-native-collapsingtoolbar-parallax-header",
+  "version": "1.0.2",
+  "description": "react native collapsing Toolbar",
+  "main": "./src",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "react-native-collapsingtoolbar-parallax-header"
+  },
+  "keywords": [
+    "Toolbar",
+    "react native",
+    "nav bar",
+    "App bar",
+    "collapsing toolbar",
+    "collapsing",
+    "header",
+    "parallax",
+    "toolbar",
+    "parallax header"
+  ],
+  "author": "irakli samniashvili",
+  "license": ""
+}
