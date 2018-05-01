@@ -2,7 +2,7 @@
 
 ## Screen Shot
 
-<img src="https://github.com/sanpyaelin/react-native-collapsingtoolbar/blob/master/screenshot/1.gif" width="285">    <img src="https://github.com/sanpyaelin/react-native-collapsingtoolbar/blob/master/screenshot/2.gif" width="285">
+<img src="https://github.com/ODINA101/react-native-collapsingtoolbar-parallax-header/blob/master/screenshot/1.gif" width="285">    <img src="https://github.com/ODINA101/react-native-collapsingtoolbar-parallax-header/blob/master/screenshot/2.gif" width="285">
 
 
 ## Getting Started
@@ -21,7 +21,7 @@ $ yarn add react-native-collapsingtoolbar-parallax-header
 Import the component:
 ```js
     import CollapsingToolbar from 'react-native-collapsingtoolbar-parallax-header';
-    import Icon from 'react-native-vector-icons/Ionicons';
+    import Icon from 'react-native-vector-icons/Ionicons'; 
 
     <CollapsingToolbar 
         leftItem={<Icon name="md-menu" size={30} color="#fff" />}
