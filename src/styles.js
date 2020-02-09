@@ -1,3 +1,5 @@
+import { Platform } from 'react-native';
+
 const React = require('react-native');
 const { StyleSheet } = React;
 
@@ -21,7 +23,7 @@ const styles = StyleSheet.create({
         left: 0,
         right: 0,
         width: null,
-        resizeMode: 'cover',
+        resizeMode: "stretch",
       },
       action: {
         left: 0,
@@ -60,7 +62,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
       },
       title: {
-        fontFamily: 'Roboto_medium',
+        fontFamily: Platform.OS === "ios" ? "System":'Roboto_medium',
         fontSize: 25,
       },
       scrollViewContent: {

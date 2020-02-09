@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {
   Animated,
-  Platform,
-  StatusBar,
-  StyleSheet,
   Text,
   View,
   TouchableOpacity
@@ -70,12 +67,7 @@ class CollapsingToolbar extends Component {
 
     const titleScale = this.state.scrollY.interpolate({
       inputRange: [0, scrollDistance / 2, scrollDistance],
-      outputRange: [1, 1, 0.8],
-      extrapolate: 'clamp',
-    });
-    const titleTranslate = this.state.scrollY.interpolate({
-      inputRange: [0, scrollDistance / 2, scrollDistance],
-      outputRange: [0, 0, -8],
+      outputRange: [0, 0, 0.8],
       extrapolate: 'clamp',
     });
 
@@ -125,7 +117,7 @@ class CollapsingToolbar extends Component {
               },
             ]}
           >
-            <Text style={[styles.title,{color: titleColor}]}>{title}</Text>
+            <Text numberOfLines={1} style={[styles.title,{color: titleColor}]}>{title}</Text>
           </Animated.View>
         </Animated.View>
         <Animated.View style={styles.bar}>
