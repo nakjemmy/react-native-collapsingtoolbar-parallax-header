@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
         left: 0,
         right: 0,
         bottom: 0,
-        height: 60,
+        height: 56,
         flexDirection: 'row',
         alignItems: 'center',
         paddingHorizontal: 40,
@@ -62,8 +62,11 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
       },
       title: {
-        fontFamily: Platform.OS === "ios" ? "System":'Roboto_medium',
-        fontSize: 25,
+        fontWeight: 'normal',
+        fontSize: 20,
+        paddingLeft: 20,
+        paddingRight: 20,
+        marginBottom: 0
       },
       scrollViewContent: {
         paddingTop: 30,

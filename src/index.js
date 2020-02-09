@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {
   Animated,
+  Platform,
+  StatusBar,
+  StyleSheet,
   Text,
   View,
   TouchableOpacity
@@ -33,7 +36,7 @@ const defaultProps = {
   titleColor: '#fff',
   toolbarColor: '#e91e63',
   toolbarMaxHeight: 300,
-  toolbarMinHeight: 55,
+  toolbarMinHeight: 45,
 };
 
 class CollapsingToolbar extends Component {
@@ -67,7 +70,12 @@ class CollapsingToolbar extends Component {
 
     const titleScale = this.state.scrollY.interpolate({
       inputRange: [0, scrollDistance / 2, scrollDistance],
-      outputRange: [0, 0, 0.8],
+      outputRange: [0, 0, 1],
+      extrapolate: 'clamp',
+    });
+    const titleTranslate = this.state.scrollY.interpolate({
+      inputRange: [0, scrollDistance / 2, scrollDistance],
+      outputRange: [0, 0, -8],
       extrapolate: 'clamp',
     });
 
