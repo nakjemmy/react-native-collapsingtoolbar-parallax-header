@@ -36,7 +36,7 @@ const defaultProps = {
   titleColor: '#fff',
   toolbarColor: '#e91e63',
   toolbarMaxHeight: 300,
-  toolbarMinHeight: 45,
+  toolbarMinHeight: 55,
 };
 
 class CollapsingToolbar extends Component {
@@ -69,8 +69,8 @@ class CollapsingToolbar extends Component {
     });
 
     const titleScale = this.state.scrollY.interpolate({
-      inputRange: [0, scrollDistance / 2, scrollDistance],
-      outputRange: [0, 0, 1],
+      inputRange: [0, scrollDistance / 2, scrollDistance / 1.5, scrollDistance / 1.2, scrollDistance],
+      outputRange: [.01, .02, 0.05, 0.6, 1],
       extrapolate: 'clamp',
     });
     const titleTranslate = this.state.scrollY.interpolate({
@@ -79,6 +79,7 @@ class CollapsingToolbar extends Component {
       extrapolate: 'clamp',
     });
 
+    console.log(this.state.scrollY)
     return (
       <View style={styles.fill}>
         
@@ -125,7 +126,7 @@ class CollapsingToolbar extends Component {
               },
             ]}
           >
-            <Text numberOfLines={1} style={[styles.title,{color: titleColor}]}>{title}</Text>
+            <Text  numberOfLines={1} style={[styles.title,{color: titleColor}]}>{title}</Text>
           </Animated.View>
         </Animated.View>
         <Animated.View style={styles.bar}>
