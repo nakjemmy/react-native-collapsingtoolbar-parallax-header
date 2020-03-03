@@ -63,7 +63,9 @@ const styles = StyleSheet.create({
       },
       title: {
         fontWeight: 'normal',
+        textAlign: Platform.OS === 'ios' ? 'center':'left',
         fontSize: 20,
+        width: '100%',
         paddingBottom: 2.5,
         paddingLeft: 20,
         paddingRight: 20
