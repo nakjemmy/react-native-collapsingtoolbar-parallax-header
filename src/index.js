@@ -79,7 +79,6 @@ class CollapsingToolbar extends Component {
       extrapolate: 'clamp',
     });
 
-    console.log(this.state.scrollY)
     return (
       <View style={styles.fill}>
         
